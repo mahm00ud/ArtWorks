@@ -13,7 +13,7 @@ npm run test:addArtwork-chrome-headed-10times >> this is used to run the addArtW
 npm run test:addArtwork-allBrowsers-headed  >> this is used to run the addArtWork tests in chrome, firefox and webkit browsers in headed mode.
 ```
 
-# Also you can write these commands update the env variables before run
+# Also you can write these commands to update the env variables before run
 ```
 $env:USERNAME_STAGE="username"; $env:PASSWORD_STAGE="password";  npm run test:addArtwork-chrome-headed
 ```
