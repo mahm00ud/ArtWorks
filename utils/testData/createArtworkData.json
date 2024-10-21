@@ -1,0 +1,26 @@
+{
+    "ArtworkName": "testName",
+    "Editions":[
+        "Limited Edition",
+        "1/1 Edition",
+        "Multiple Edition",
+        "Open Edition"
+    ],
+    "Description":"Test Description",
+    "PrimarySaleBuyer":"test@test.com",
+    "StyleOfWork":[
+        "Abstract",
+        "Cubism",
+        "Pop Art",
+        "Surrealism",
+        "Minimalism",
+        "Portraits",
+        "Macro",
+        "Fashion",
+        "Meme",
+        "Astral",
+        "Other"
+    ],
+    "NFTGenesis":["2017 or Before","2018","2019","2020","2021","2022","2023"],
+    "Supply":["< 10 /year","10 - 24 /year","25 - 49 /year","50 - 99 /year","> 100 /year"]
+}

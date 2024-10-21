@@ -1,0 +1,21 @@
+{
+  "name": "artworks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:addArtwork-chrome-headed": "npx playwright test ./tests/specs/addArtworkTests.spec.ts --project=chromium --headed",
+    "test:addArtwork-chrome-headed-10times": "npx playwright test --repeat-each 10 ./tests/specs/addArtworkTests.spec.ts --project=chromium --headed",
+    "test:addArtwork-allBrowsers-headed": "npx playwright test ./tests/specs/addArtworkTests.spec.ts --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.48.1",
+    "@types/node": "^22.7.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "homePage": "https://staging.alt.art",
+    "loginPage": "https://staging.alt.art/login",
+    "createArtworkPage": "https://staging.alt.art/artworks/create",
+    "artworksListPage": "https://staging.alt.art/artworks"
+}
