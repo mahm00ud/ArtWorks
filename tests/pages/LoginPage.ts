@@ -28,5 +28,7 @@ export class LoginPage{
         await this.emailField.fill(email);
         await this.passwordField.fill(password);
         await this.loginBtn.click();
+        await this.page.waitForURL(urls.homePage);
+        await expect(this.page).toHaveURL(urls.homePage);
     }
 }

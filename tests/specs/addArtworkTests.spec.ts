@@ -1,25 +1,23 @@
 import  testData  from '../../utils/testData/credentials.json';
 import  artworkData  from '../../utils/testData/createArtworkData.json';
 import { test, expect } from "../fixtures/base"
+import { CreateArtworkPage } from '../pages/CreateArtworkPage';
  
 const USERNAME = process.env.USERNAME_STAGE!;
 const PASSWORD = process.env.PASSWORD_STAGE!;
 
 const IMAGE_PATH: string= "utils/testData/images/testImage.jpg";
 
-test.beforeEach(async ({loginPage}, testinfo)=>{
+test.beforeEach(async ({loginPage, createArtworkPage}, testinfo)=>{
     console.log(`Running ${testinfo.title}`);
     await loginPage.goTo();
     await loginPage.login(USERNAME, PASSWORD);
+    await createArtworkPage.goTo();
 });
 
 test.describe('Adding Artwork Tests', ()=>{
 
     test("Adding an Artwork and checking if it's added in Artworks Page", async ({ homePage, createArtworkPage, artworksListPage, dateTime }) => {
-        await homePage.clickOnArtworksHeader();
-        await artworksListPage.clickOnAddArtwork();
-        await createArtworkPage.clickOnStyleOfArtWork();
-    
         const artworkName: string = "TestArtWorkName"+await dateTime.getCurrentDateTime();
         await createArtworkPage.insertArtworkName(artworkName);
         
@@ -45,10 +43,6 @@ test.describe('Adding Artwork Tests', ()=>{
       });
 
       test("Adding an Artwork and Adding a review for it", async ({ homePage, createArtworkPage, artworkPage, artworksListPage, dateTime }) => {
-        await homePage.clickOnArtworksHeader();
-        await artworksListPage.clickOnAddArtwork();
-        await createArtworkPage.clickOnStyleOfArtWork();
-    
         const artworkName: string = "TestArtWorkName"+await dateTime.getCurrentDateTime();
         await createArtworkPage.insertArtworkName(artworkName);
         
